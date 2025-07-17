@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lullaby Reborn - Privacy Policy</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .markdown-body {
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .markdown-body h1 {
+            color: #667eea;
+            font-size: 2.2em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .markdown-body h2 {
+            color: #764ba2;
+            font-size: 1.6em;
+            margin: 30px 0 15px 0;
+            padding: 10px 0;
+            border-left: 4px solid #667eea;
+            padding-left: 15px;
+        }
+
+        .markdown-body h3 {
+            color: #555;
+            font-size: 1.3em;
+            margin: 25px 0 10px 0;
+        }
+
+        .markdown-body p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .markdown-body strong {
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        .markdown-body blockquote {
+            background: linear-gradient(135deg, #f8f9ff 0%, #e8f0ff 100%);
+            border-left: 4px solid #667eea;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            font-style: italic;
+        }
+
+        .markdown-body blockquote p {
+            margin: 0;
+            color: #555;
+        }
+
+        .markdown-body ul, .markdown-body ol {
+            margin: 15px 0;
+            padding-left: 25px;
+        }
+
+        .markdown-body li {
+            margin-bottom: 8px;
+        }
+
+        .markdown-body table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .markdown-body th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .markdown-body td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .markdown-body tr:hover {
+            background: #f8f9ff;
+        }
+
+        .markdown-body hr {
+            border: none;
+            height: 2px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 30px 0;
+            border-radius: 1px;
+        }
+
+        .markdown-body a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .markdown-body a:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+
+        .markdown-body code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            color: #667eea;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 50px;
+            color: #667eea;
+            font-size: 1.2em;
+        }
+
+        .footer {
+            background: #f8f9ff;
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                border-radius: 10px;
+            }
+            
+            .header {
+                padding: 20px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .markdown-body {
+                font-size: 14px;
+            }
+        }
+
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            font-size: 18px;
+            opacity: 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .scroll-top.show {
+            opacity: 1;
+        }
+
+        .scroll-top:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎵 Lullaby Reborn</h1>
+            <p>Privacy Policy</p>
+        </div>
+        
+        <div class="content">
+            <div id="markdown-content" class="loading">
+                Carregando política de privacidade...
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>&copy; 2025 Talyz Apps. Todos os direitos reservados.</p>
+        </div>
+    </div>
+
+    <button class="scroll-top" id="scrollTop">↑</button>
+
+    <script>
+        // Conteúdo Markdown
+        const markdownContent = `# 🎵 Lullaby Reborn - Privacy Policy
+
+**Effective Date:** July 17, 2025  
+**Developer:** Talyz Apps  
+**Contact:** talyzapps@gmail.com
+
+---
+
+## 📱 About This Service
+
+Lullaby Reborn is built by **Talyz Apps** as a **free app**. This SERVICE is provided by Talyz Apps at no cost and is intended for use as is.
+
+This page is used to inform visitors regarding our policies with the collection, use, and disclosure of Personal Information if anyone decides to use our Service.
+
+> **Important:** If you choose to use our Service, then you agree to the collection and use of information in relation to this policy.
+
+---
+
+## 🔒 Our Privacy Commitment
+
+**We do not collect any personally identifiable information from users.** However, the app may use third-party services that may collect information used to identify you.
+
+---
+
+## 📊 Information Collection and Use
+
+**Lullaby Reborn itself does not collect or store any personal information from its users.**
+
+The app uses an internet connection to:
+- Stream music content
+- Display advertisements provided by third-party services
+
+---
+
+## 🔗 Third-Party Services
+
+The app does use third-party services that may collect information to identify you. These include but may not be limited to:
+
+| Service | Purpose |
+|---------|---------|
+| **Google Play Services** | Core Android functionality |
+| **AdMob** | Advertisement delivery |
+
+---
+
+## 📋 Log Data
+
+Whenever you use our Service, in case of an error in the app, we collect data and information (through third-party products) on your phone called **Log Data**.
+
+This Log Data may include information such as:
+- Your device Internet Protocol ("IP") address
+- Device name
+- Operating system version
+- The configuration of the app when utilizing our Service
+- The time and date of your use of the Service
+- Other statistics
+
+---
+
+## 🍪 Cookies
+
+This Service **does not use cookies explicitly**. However, the app may use third-party code and libraries that use cookies to collect information and improve their services. 
+
+You have the option to **accept or refuse** these cookies.
+
+---
+
+## 🛡️ Security
+
+We value your trust in providing us your information, thus we strive to use commercially acceptable means of protecting it. 
+
+> **Important Notice:** No method of transmission over the internet, or method of electronic storage is 100% secure and reliable, and we cannot guarantee its absolute security.
+
+---
+
+## 🌐 Links to Other Sites
+
+This Service may contain links to other sites. If you click on a third-party link, you will be directed to that site. 
+
+⚠️ **Please note:** These external sites are not operated by us. Therefore, we strongly advise you to review the Privacy Policy of these websites. We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.
+
+---
+
+## 👶 Children's Privacy
+
+These Services **do not address anyone under the age of 13**. We do not knowingly collect personally identifiable information from children under 13. 
+
+**If we discover that a child under 13 has provided us with personal information, we will immediately delete this from our servers.**
+
+**Parents and Guardians:** If you are aware that your child has provided us with personal information, please contact us so that we can take necessary actions.
+
+---
+
+## 🔄 Changes to This Privacy Policy
+
+We may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. 
+
+We will notify you of any changes by posting the new Privacy Policy on this page.
+
+---
+
+## 📞 Contact Us
+
+If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us:
+
+**Email:** [talyzapps@gmail.com](mailto:talyzapps@gmail.com)
+
+---
+
+*This policy is effective as of July 17, 2025.*`;
+
+        // Função para renderizar o Markdown
+        function renderMarkdown() {
+            const contentDiv = document.getElementById('markdown-content');
+            try {
+                const htmlContent = marked.parse(markdownContent);
+                contentDiv.innerHTML = htmlContent;
+                contentDiv.classList.remove('loading');
+                contentDiv.classList.add('markdown-body');
+            } catch (error) {
+                contentDiv.innerHTML = '<p>Erro ao carregar o conteúdo. Tente novamente mais tarde.</p>';
+                console.error('Erro ao renderizar Markdown:', error);
+            }
+        }
+
+        // Botão de scroll para o topo
+        function setupScrollTop() {
+            const scrollTopBtn = document.getElementById('scrollTop');
+            
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    scrollTopBtn.classList.add('show');
+                } else {
+                    scrollTopBtn.classList.remove('show');
+                }
+            });
+            
+            scrollTopBtn.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+
+        // Inicializar quando a página carregar
+        document.addEventListener('DOMContentLoaded', () => {
+            renderMarkdown();
+            setupScrollTop();
+        });
+    </script>
+</body>
+</html>
